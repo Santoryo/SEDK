@@ -13,6 +13,8 @@
     "chokidar": "^3.6.0",
     "cssbeautify": "^0.3.1",
     "express": "^4.19.2",
+    "html-validator": "^6.0.1",
+    "htmlparser2": "^9.1.0",
     "node-html-parser": "^6.1.13",
     "pino": "^9.3.2",
     "pino-pretty": "^11.2.2"
