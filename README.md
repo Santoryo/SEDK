@@ -4,6 +4,11 @@ A simple Development Kit for creating StreamElements Custom Widgets locally, wit
 ![GitHub License](https://img.shields.io/github/license/santoryo/SEDK)
 <a href="https://ko-fi.com/santowyo" target="_blank">![Ko-Fi](https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi)</a>
 
+### Features
+1. Live Development Server that reloads on any file save and changes.
+2. Auto SVG to CSS to handle StreamElements no storage limitation.
+3. Simple building into .zip folder that can be imported directly into StreamElements Overlays Feature.
+
 
 ### Setup
 1. Clone the repo with ```git clone https://github.com/Santoryo/SEDK``` (or download the zip file from GitHub / Ko-Fi)
