@@ -12,8 +12,10 @@ const cheerio = require('cheerio')
 const chokidar = require('chokidar')
 const cssbeautify = require('cssbeautify')
 const { parse } = require('node-html-parser')
+const escodegen = require('escodegen');
 
 const pino = require('pino')
+const { JS2AST } = require('./.sdk/JS2AST')
 const logger = pino({
     transport: {
         target: 'pino-pretty'
@@ -193,6 +195,11 @@ function parseComponents() {
     const widgetJs = path.join(__dirname, 'widget', 'widget.js');
 
     let jsContent = fs.readFileSync(widgetJs, 'utf8');
+    let astTree = JS2AST(jsContent);
+
+
+
+
     fs.readdir(componentsPath, (err, files) => {
         if (err) throw err;
 
@@ -202,14 +209,31 @@ function parseComponents() {
                 const $ = cheerio.load(html);
 
                 let match;
+                let replaced = false;
                 const variables = [];
+                const beforeScripts = [];
+                const afterScrips = [];
 
                 $('script').each((index, element) => {
+
+                    if($(element).attr('cat') === 'before')
+                    {
+                        beforeScripts.push($(element).text());
+                    }
+                    else if($(element).attr('cat') === 'after')
+                    {
+                        afterScrips.push($(element).text());
+                    }
+                    else {
+
+
                     const scriptContent = $(element).text();
                     const regex = /(?:let|var|const)\s+([a-zA-Z_$][a-zA-Z_$0-9]*)(?:\s*=\s*[^;]*)?(?:\s*;)?/g;
 
                     while ((match = regex.exec(scriptContent)) !== null) {
                         variables.push(match[1]);
+                    }
+
                     }
                 });
 
@@ -224,27 +248,35 @@ function parseComponents() {
                 const functionName = file.replace('.html', '');
                 const formattedFunctionName = `add${functionName.charAt(0).toUpperCase() + functionName.slice(1)}`;
                 const functionBody = `function ${formattedFunctionName}(${variables.join(', ')}) {
-  const elem = document.createElement('div');
-  elem.innerHTML = \`${$('body').html()}\`;
-  document.getElementById('main-container').appendChild(elem);
-}`;
+                    ${beforeScripts.join('\n')}
+                    const elem = document.createElement('div');
+                    elem.innerHTML = \`${$('body').html()}\`;
+                    document.getElementById('main-container').appendChild(elem);
+                    ${afterScrips.join('\n')}
+                    }`;
 
-                // Regex to match the entire function
-                const functionRegex = new RegExp(`function ${formattedFunctionName}\\s*\\([^)]*\\)\\s*\\{[^}]*\\}`, 'g');
+                const functionNode = JS2AST(functionBody);
 
-                if (functionRegex.test(jsContent)) {
-                    // Replace existing function
-                    jsContent = jsContent.replace(functionRegex, functionBody);
-                } else {
-                    if (functionBody.endsWith('\n')) {
-                        jsContent += functionBody + '\n';
+                for(const node of astTree.body)
+                {
+                    if(node.type === 'FunctionDeclaration' && node.id.name === formattedFunctionName)
+                    {
+                        const index = astTree.body.indexOf(node);
+                        astTree.body.splice(index, 1);
+                        astTree.body.splice(index, 0, functionNode);
+                        replaced = true;
+                        break;
                     }
-                    else {
-                        jsContent += functionBody
-                    }
+                }
+
+                if(!replaced)
+                {
+                    astTree.body.push(functionNode);
                 }
             }
         });
+
+        jsContent = escodegen.generate(astTree);
 
         fs.writeFile(widgetJs, jsContent, (err) => {
             if (err) throw err;

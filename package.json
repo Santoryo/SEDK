@@ -4,14 +4,18 @@
   "description": "StreamElements Widget SDK",
   "main": "index.js",
   "scripts": {
-    "dev": "node sdk.js"
+    "dev": "node sdk.js",
+    "build": "node .sdk/build.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "archiver": "^7.0.1",
     "cheerio": "^1.0.0-rc.12",
     "chokidar": "^3.6.0",
     "cssbeautify": "^0.3.1",
+    "escodegen": "^2.1.0",
+    "esprima": "^4.0.1",
     "express": "^4.19.2",
     "html-validator": "^6.0.1",
     "htmlparser2": "^9.1.0",

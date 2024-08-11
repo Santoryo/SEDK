@@ -9,12 +9,20 @@
     let username;
     let messageId;
     var userInfo;
-    let messageTime;
 
     // Will create function called onMessage(message, username, messageId, userInfo)
 </script>
 
+<script cat="before">
+    let randomNum = Math.floor(Math.random() * 1000);
+</script>
+
+<script cat="after">
+    console.log("Successfully appended message to the DOM " + message);
+</script>
+
 <div class="message">
     <div>username</div>
-    <span>[message]</span>
+    <span>${message}</span>
+    <span>Random num: ${randomNum}</span>
 </div>
