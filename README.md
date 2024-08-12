@@ -8,6 +8,8 @@ A simple Development Kit for creating StreamElements Custom Widgets locally, wit
 <a href="https://ko-fi.com/santowyo" target="_blank">![Ko-Fi](https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi)</a>
 ![GitHub Release](https://img.shields.io/github/v/release/santoryo/sedk)
 
+Need help with code? Join our Discord [https://discord.gg/MgFbfkNDPY](https://discord.gg/MgFbfkNDPY)
+
 ### Features
 
 1. Live Development Server that reloads on any file save and changes.
