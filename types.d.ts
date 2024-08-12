@@ -77,5 +77,6 @@ declare namespace SEDK {
             | "bot:counter"
             | "kvstore:update"
             | "widget-button"
+            | "event:test"
     }
 }

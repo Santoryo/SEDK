@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "node sdk.js",
         "build": "npm run format && node .sdk/build.js",
-        "format": "prettier ./widget --write && eslint --fix ./widget"
+        "format": "prettier ./widget --write"
     },
     "author": "",
     "license": "ISC",
@@ -27,9 +27,6 @@
         "zip-a-folder": "^3.1.7"
     },
     "devDependencies": {
-        "@eslint/js": "^9.9.0",
-        "@stylistic/eslint-plugin": "^2.6.2",
-        "eslint": "^9.9.0",
         "globals": "^15.9.0",
         "typescript": "^5.5.4"
     }
