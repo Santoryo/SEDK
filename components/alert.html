@@ -1,7 +1,12 @@
+<script type="text/javascript" src="https://livejs.com/live.js"></script>
+<link rel="stylesheet" href="widget.css" />
 <script>
-  let message;
-  let username;
-  let messageId
-  var otherInfo
+    let message;
+    let user;
+    let messageId;
 </script>
-<div class="message">This is my component! o fds</div>
+
+<div class="alert" id="m${messageId}">
+    <div>${user}</div>
+    <span>${message}</span>
+</div>

@@ -1,8 +1,0 @@
-{
-    "testMessage": {
-      "type": "button",
-      "label": "Test message",
-      "value": "Test message",
-      "group": "Other"
-    }
-}

@@ -1,47 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<script type="text/javascript" src="https://livejs.com/live.js"></script>
-<script src="/widget/widget.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-<link href="widget.css" rel="stylesheet">
-<script src="widget.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            type="text/javascript"
+            src="https://livejs.com/live.js"
+        ></script>
+        <script src="/widget/widget.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin=""
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link href="widget.css" rel="stylesheet" />
+        <script src="widget.js"></script>
+    </head>
 
-<body>
-    <div class="flex flex-row gap-2 w-full p-4">
-        <button class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold" onclick="addMessage(randomString())">Test message</button>
-        <button class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold" onclick="addAlert()">Test sub</button>
-        <button class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold" onclick="addCheer()">Test cheer x100</button>
+    <body>
+        <div class="flex flex-row gap-2 w-full p-4">
+            <button
+                class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold"
+                onclick="addMessage(randomString())"
+            >
+                Test message
+            </button>
+            <button
+                class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold"
+                onclick="addAlert('has subscribed the channel!', 'santowyo')"
+            >
+                Test sub
+            </button>
+            <button
+                class="rounded-full bg-purple-500 text-white px-4 py-1 hover:bg-purple-600 font-semibold"
+                onclick="addAlert('has cheered x100!', 'santowyo', 100)"
+            >
+                Test cheer x100
+            </button>
 
-        <a href="https://github.com/santoryo/SEDK" target="_blank"><button class="rounded-full bg-pink-500 text-white px-4 py-1 hover:bg-pink-600 font-semibold">Help</button></a>
-    </div>
-    
-    <div class="w-[1000px] h-[600px]">
-        <div class="main-container" id="main-container">
+            <a href="https://github.com/santoryo/SEDK" target="_blank"
+                ><button
+                    class="rounded-full bg-pink-500 text-white px-4 py-1 hover:bg-pink-600 font-semibold"
+                >
+                    Help
+                </button></a
+            >
         </div>
-    </div>
 
-</body></html>
+        <div class="w-[1000px] h-[600px]">
+            <div class="main-container" id="main-container"></div>
+        </div>
+    </body>
+</html>
 
 <script>
-    function randomString()
-    {
+    function randomString() {
         const messages = [
             "This is a test message",
             "Brown fox jumps over the lazy dog",
             "Sphinx of black quartz, judge my vow.",
             "How vexingly quick daft zebras jump!",
-            "Pack my box with five dozen liquor jugs."
+            "Pack my box with five dozen liquor jugs.",
         ]
 
-        return messages[Math.floor(Math.random() * messages.length)];
+        return messages[Math.floor(Math.random() * messages.length)]
     }
 </script>

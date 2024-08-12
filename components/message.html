@@ -1,28 +1,23 @@
 <!-- Live.JS allows us to see changes whenever you hit CTRL + S -->
 <script type="text/javascript" src="https://livejs.com/live.js"></script>
-<link rel="stylesheet" href="widget.css">
+<link rel="stylesheet" href="widget.css" />
 <script>
     // Each component in this folder will be transformed into JS function "onNameFile"
     // Each variable will be exported into function variable example
     // Known limitation is that you can't have multiple variables in one line
-    let message;
-    let username;
-    let messageId;
-    var userInfo;
+    let message
+    let username
+    let messageId
+    var userInfo
 
     // Will create function called onMessage(message, username, messageId, userInfo)
 </script>
 
-<script cat="before">
-    let randomNum = Math.floor(Math.random() * 1000);
-</script>
-
 <script cat="after">
-    console.log("Successfully appended message to the DOM " + message);
+    console.log("Successfully appended message to the DOM " + message)
 </script>
 
-<div class="message">
-    <div>username</div>
+<div class="message" id="m${messageId}">
+    <div>${username}</div>
     <span>${message}</span>
-    <span>Random num: ${randomNum}</span>
 </div>

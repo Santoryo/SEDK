@@ -1,1 +1,18 @@
-{"eventsLimit":5,"includeFollowers":"yes","includeRedemptions":"yes","includeHosts":"yes","minHost":1,"includeRaids":"yes","minRaid":1,"includeSubs":"yes","includeTips":"yes","minTip":1,"includeCheers":"yes","minCheer":1,"direction":"top","textOrder":"nameFirst","fadeoutTime":999,"fontColor":"rgb(255, 255, 255)","theme":"texture","backgroundOpacity":50,"backgroundColor":"rgba(36, 6, 73, 0.15)","iconColor":"rgb(255, 255, 255, 255)","locale":"en-US","fontName":"Montserrat","fontSize":24,"fontWeight":"400","messagebackgroundColor":"rgba(255,255,255,1)","textShadow":"rgb(0, 0, 0) 1px 1px 1px","emoteSize":24,"alignMessages":"flex","nickColor":"user","customNickColor":"rgba(0,255,0,1)","userbackgroundColor":"rgba(0,0,0,1)","messagesLimit":5,"hideAfter":999,"hideCommands":"yes","badgesVisibility":"none","ignoredUsers":"StreamElements,OtherBot","sliderNickname":0,"outlineColor":"rgba(0,0,0,0)","animationIn":"none","animationOut":"none","testMessage":"Test message"}
+{
+    "eventsLimit": 999,
+    "includeFollowers": "yes",
+    "includeRedemptions": "yes",
+    "includeHosts": "yes",
+    "minHost": 1,
+    "includeRaids": "yes",
+    "minRaid": 1,
+    "includeSubs": "yes",
+    "includeTips": "yes",
+    "minTip": 1,
+    "includeCheers": "yes",
+    "minCheer": 1,
+    "hideAfter": 999,
+    "hideCommands": "yes",
+    "ignoredUsers": "StreamElements,OtherBot",
+    "testMessage": "Test message"
+}
