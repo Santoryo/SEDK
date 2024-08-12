@@ -3,7 +3,7 @@ const fs = require("fs")
 
 function JS2AST(program)
 {
-  const tokens = esprima.parseScript(program, {loc: true});
+  const tokens = esprima.parseScript(program, {loc: true, comment: true, attachComment: true});
   return tokens;
 }
 

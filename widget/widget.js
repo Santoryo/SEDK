@@ -1,3 +1,19 @@
+let totalMessages = 0;
+let messagesLimit = 30;
+window.addEventListener('onEventReceived', async function (obj) {
+    controller(obj.detail);
+});
+function controller(detail) {
+    totalMessages++;
+    switch (detail.listener) {
+    case 'message':
+        addMessage(detail.event.renderedText, detail.event.data.displayName, totalMessages, detail.event.data);
+        break;
+    case 'cheer-latest':
+        addCheer('HAS CHEERED', detail.event.name, detail.event.amount);
+        break;
+    }
+}
 function addAlert(message, username, messageId, otherInfo) {
     const elem = document.createElement('div');
     elem.innerHTML = `<div class="message">This is my component! o fds</div>`;
