@@ -7,6 +7,7 @@ A simple Development Kit for creating StreamElements Custom Widgets locally, wit
 ![GitHub License](https://img.shields.io/github/license/santoryo/SEDK)
 <a href="https://ko-fi.com/santowyo" target="_blank">![Ko-Fi](https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi)</a>
 ![GitHub Release](https://img.shields.io/github/v/release/santoryo/sedk)
+![Discord](https://img.shields.io/discord/1210679064394989629)
 
 Need help with code? Join our Discord [https://discord.gg/MgFbfkNDPY](https://discord.gg/MgFbfkNDPY)
 
