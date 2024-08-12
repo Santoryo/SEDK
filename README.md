@@ -2,7 +2,7 @@
 
 A simple Development Kit for creating StreamElements Custom Widgets locally, with more cleaner and intuitive workflow. It's goal is to make a simpler and more fun development of custom widgets for SE without annoying copy/paste workflow. Made with love by [@santowyo](https://twitter.com/santowyo).
 
-Disclaimer: This project is heavily still under WIP. Many things will change until 1.0 release. Contributions are open for code structure and general help to make the best tool as possible.
+**Disclaimer:** This project is heavily still under WIP. Many things will change until 1.0 release. Contributions are open for code structure and general help to make the best tool as possible.
 
 ![GitHub License](https://img.shields.io/github/license/santoryo/SEDK)
 <a href="https://ko-fi.com/santowyo" target="_blank">![Ko-Fi](https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi)</a>
