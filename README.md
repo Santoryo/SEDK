@@ -6,6 +6,7 @@ Disclaimer: This project is heavily still under WIP. Many things will change unt
 
 ![GitHub License](https://img.shields.io/github/license/santoryo/SEDK)
 <a href="https://ko-fi.com/santowyo" target="_blank">![Ko-Fi](https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi)</a>
+![GitHub Release](https://img.shields.io/github/v/release/santoryo/sedk)
 
 ### Features
 
